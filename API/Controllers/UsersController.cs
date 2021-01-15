@@ -28,7 +28,9 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers()
         {
-            return Ok(_userRepository.GetMembersAsync());
+            var users = await _userRepository.GetMembersAsync();
+
+            return Ok(users);
         }
         
         [HttpGet("{username}")]

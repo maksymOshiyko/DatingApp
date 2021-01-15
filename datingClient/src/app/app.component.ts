@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   constructor(private accountService: AccountService) {}
 
   ngOnInit(): void {
-
     this.setCurrentUser();
   }
 
